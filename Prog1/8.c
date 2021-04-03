@@ -2,9 +2,12 @@
 
 //3min
 int maior_subida(int *arr, int dim){
-int i,maior=0,pos=0,dif=0;
+int i,maior,pos=0,dif=0;
 for(i=1; i<dim; ++i){
-  dif=arr[i]-arr[i-1];
+  if(i==1)
+    maior=dif=arr[i]-arr[i-1];
+  else
+    dif=arr[i]-arr[i-1];
   if(dif>=maior){
     maior=dif;
     pos=i;
